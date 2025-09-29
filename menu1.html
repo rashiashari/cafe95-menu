@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafe95 Menu</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #d4a017; color: #000000; }
+    header { background: #000000; padding: 20px; text-align: center; color: #ffffff; }
+    header img { max-width: 120px; }
+    header h1 { margin: 0; font-size: 2em; }
+    header p { margin: 5px 0; }
+    nav { background: #333333; color: #ffffff; padding: 10px; text-align: center; }
+    nav a { color: #ffffff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .hero { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; background: #666666; }
+    .hero img { max-width: 300px; margin: 10px; border-radius: 10px; border: 2px solid #ffffff; }
+    .menu-section { padding: 30px; }
+    .menu-section h2 { border-bottom: 2px solid #000000; padding-bottom: 10px; margin-top: 40px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .menu-item { background: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.3s ease; }
+    .menu-item:hover { transform: scale(1.02); }
+    .menu-item .name { font-weight: bold; font-size: 1.2em; }
+    .menu-item .desc { font-size: 0.9em; margin-top: 5px; }
+    .menu-item .price { font-size: 1.1em; margin-top: 5px; }
+    .subdog { background-color: #000000; color: #ffffff; } /* Black with white text */
+    .subdog .desc { color: #ffffff; } /* Ensure description is white */
+    .subdog .price { color: #ffffff; } /* Ensure price is white */
+    .burger { background-color: #ffffff; color: #000000; } /* White with black text */
+    .sides { background-color: #666666; color: #ffffff; } /* Dark Grey with white text */
+    .sides .desc { color: #ffffff; } /* Ensure description is white */
+    .sides .price { color: #ffffff; } /* Ensure price is white */
+    .surf-turf { background-color: #333333; color: #ffffff; } /* Medium Grey with white text */
+    .surf-turf .desc { color: #ffffff; } /* Ensure description is white */
+    .surf-turf .price { color: #ffffff; } /* Ensure price is white */
+    .wings { background-color: #999999; color: #000000; } /* Light Grey with black text */
+    .drinks { background-color: #000000; color: #ffffff; } /* Black with white text */
+    .drinks .desc { color: #ffffff; } /* Ensure description is white */
+    .drinks .price { color: #ffffff; } /* Ensure price is white */
+    .hotdogs { background-color: #ffffff; color: #000000; } /* White with black text */
+    .toasty { background-color: #666666; color: #ffffff; } /* Dark Grey with white text */
+    .toasty .desc { color: #ffffff; } /* Ensure description is white */
+    .toasty .price { color: #ffffff; } /* Ensure price is white */
+    .quesadilla { background-color: #333333; color: #ffffff; } /* Medium Grey with white text */
+    .quesadilla .desc { color: #ffffff; } /* Ensure description is white */
+    .quesadilla .price { color: #ffffff; } /* Ensure price is white */
+    .wraps { background-color: #999999; color: #000000; } /* Light Grey with black text */
+    .footer { background: #333333; color: #ffffff; text-align: center; padding: 20px; margin-top: 40px; }
+    @media (max-width: 600px) {
+      .hero img { max-width: 100%; }
+      nav a { display: block; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Cafe95</h1>
+  <p>EST. 2023 – Where flavor meets comfort</p>
+</header>
+
+<nav>
+  <a href="#menu">Menu</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="menu-section" id="menu">
+  <h2>🥪 SUBDOG</h2>
+  <div class="menu-grid">
+    <div class="menu-item subdog">
+      <span class="name">Grilled Chicken Sub</span>
+      <span class="desc">Seasoned Grilled Chicken, C95 Cheese Sauce, Olives, Tomato, Lettuce, Onion, Cucumber, C95 Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$15.50</span>
+    </div>
+    <div class="menu-item subdog">
+      <span class="name">Fried Chicken Sub</span>
+      <span class="desc">Fried Chicken, C95 Cheese Sauce, Olives, Tomato, Lettuce, Onion, Cucumber, C95 Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$15.50</span>
+    </div>
+    <div class="menu-item subdog">
+      <span class="name">Halloumi Sub</span>
+      <span class="desc">Halloumi, C95 Cheese Sauce, Tomato, Lettuce, Roasted Pumpkin, Caramelised Onion, Avocado, Cucumber, C95 Burger Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$15.50</span>
+    </div>
+    <div class="menu-item subdog">
+      <span class="name">Pulled Pork Sub</span>
+      <span class="desc">Pulled Pork, C95 Cheese Sauce, Onion, Tomato, Cucumber, Lettuce, Gherkin, C95 Sauce, BBQ, served with Special Seasoned Chips</span>
+      <span class="price">$16.50</span>
+    </div>
+    <div class="menu-item subdog">
+      <span class="name">Pulled Beef Sub</span>
+      <span class="desc">Pulled Beef, C95 Cheese Sauce, Onion, Tomato, Cucumber, Lettuce, Gherkin, C95 Sauce, BBQ, served with Special Seasoned Chips</span>
+      <span class="price">$16.50</span>
+    </div>
+    <div class="menu-item subdog">
+      <span class="name">Seafood Sub</span>
+      <span class="desc">Battered Fish, C95 Cheese Sauce, Tomato, Lettuce, Onion, Cucumber, Tartare Sauce, Tomato Salsa, served with Special Seasoned Chips</span>
+      <span class="price">$16.50</span>
+    </div>
+    <div class="menu-item subdog">
+      <span class="name">Meatball Sub</span>
+      <span class="desc">Homemade Meatballs, Bacon, C95 Cheese Sauce, Tangy Marinara Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$16.50</span>
+    </div>
+  </div>
+
+  <h2>🍔 BURGERS</h2>
+  <div class="menu-grid">
+    <div class="menu-item burger">
+      <span class="name">Grilled Chicken Burger</span>
+      <span class="desc">Seasoned Grilled Chicken, C95 Cheese Sauce, Avocado, Tomato, Lettuce, Onion, C95 Burger Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$14.50</span>
+    </div>
+    <div class="menu-item burger">
+      <span class="name">Fried Chicken Burger</span>
+      <span class="desc">Fried Chicken, C95 Cheese Sauce, Tomato, Lettuce, Onion, C95 Burger Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$14.50</span>
+    </div>
+    <div class="menu-item burger">
+      <span class="name">Halloumi Burger</span>
+      <span class="desc">Halloumi, C95 Cheese Sauce, Tomato, Lettuce, Roasted Pumpkin, Caramelised Onion, Avocado, C95 Burger Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$14.50</span>
+    </div>
+    <div class="menu-item burger">
+      <span class="name">Classic Beef Burger</span>
+      <span class="desc">Seasoned Smash Beef Patty, Bacon, Fried Egg, C95 Cheese Sauce, Tomato, Lettuce, Onion, Gherkin, C95 Burger Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$15.50</span>
+    </div>
+    <div class="menu-item burger">
+      <span class="name">C95 Juicy Lucy</span>
+      <span class="desc">Seasoned Smash Beef Patty, Bacon, Fried Egg, C95 Cheese Sauce, Tomato, Lettuce, Onion, Gherkin, C95 Burger Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$15.50</span>
+    </div>
+    <div class="menu-item burger">
+      <span class="name">Pulled Pork Burger</span>
+      <span class="desc">Pulled Pork, C95 Cheese Sauce, Tomato, Lettuce, Onion, Gherkin, C95 Burger Sauce, BBQ, served with Special Seasoned Chips</span>
+      <span class="price">$15.50</span>
+    </div>
+    <div class="menu-item burger">
+      <span class="name">Pulled Beef Burger</span>
+      <span class="desc">Pulled Beef, C95 Cheese Sauce, Tomato, Lettuce, Onion, Gherkin, C95 Burger Sauce, BBQ, served with Special Seasoned Chips</span>
+      <span class="price">$15.50</span>
+    </div>
+  </div>
+
+  <h2>🍟 SIDES</h2>
+  <div class="menu-grid">
+    <div class="menu-item sides">
+      <span class="name">Garlic Bread Sides</span>
+      <span class="desc"></span>
+      <span class="price">$3.50</span>
+    </div>
+    <div class="menu-item sides">
+      <span class="name">Cheesy Garlic Bread</span>
+      <span class="desc"></span>
+      <span class="price">$5.50</span>
+    </div>
+    <div class="menu-item sides">
+      <span class="name">Plain Chips</span>
+      <span class="desc"></span>
+      <span class="price">$6.00</span>
+    </div>
+    <div class="menu-item sides">
+      <span class="name">Loaded Chips</span>
+      <span class="desc">Seasoned Tomato, Ketchup, Jalapeno, C95 Cheese</span>
+      <span class="price">$8.00</span>
+    </div>
+  </div>
+
+  <h2>🍲 SURF AND TURF</h2>
+  <div class="menu-grid">
+    <div class="menu-item surf-turf">
+      <span class="name">Fish and Chips Turf</span>
+      <span class="desc">Seasoned Battered Fish, Tartare Sauce served with Chips and Coleslaw</span>
+      <span class="price">$18.50</span>
+    </div>
+    <div class="menu-item surf-turf">
+      <span class="name">Salt and Pepper Calamari</span>
+      <span class="desc"></span>
+      <span class="price">$19.50</span>
+    </div>
+    <div class="menu-item surf-turf">
+      <span class="name">Meatball and Chips</span>
+      <span class="desc">Homemade Meatballs served with Chips and Coleslaw</span>
+      <span class="price">$18.50</span>
+    </div>
+    <div class="menu-item surf-turf">
+      <span class="name">Crispy Chicken and Chips</span>
+      <span class="desc"></span>
+      <span class="price">$16.50</span>
+    </div>
+    <div class="menu-item surf-turf">
+      <span class="name">Fried Chicken Bacon Toast Maple</span>
+      <span class="desc">Syrup Fried served with Vanilla Ice Cream</span>
+      <span class="price">$17.50</span>
+    </div>
+  </div>
+
+  <h2>🍗 CHICKEN WINGS</h2>
+  <div class="menu-grid">
+    <div class="menu-item wings">
+      <span class="name">Buffalo Wings</span>
+      <span class="desc">Wings (6pcs) and Coleslaw</span>
+      <span class="price">$14.50</span>
+    </div>
+    <div class="menu-item wings">
+      <span class="name">BBQ Wings</span>
+      <span class="desc">Wings (6pcs) and Coleslaw</span>
+      <span class="price">$14.50</span>
+    </div>
+    <div class="menu-item wings">
+      <span class="name">C95 Special Wings (6pcs)</span>
+      <span class="desc">Salted Wings served with Chips and Coleslaw</span>
+      <span class="price">$14.50</span>
+    </div>
+    <div class="menu-item wings">
+      <span class="name">Sweet and Sour Wings (6pcs)</span>
+      <span class="desc">Sweet and Sour Wings served with Chips and Coleslaw</span>
+      <span class="price">$14.50</span>
+    </div>
+  </div>
+
+  <h2>🥤 DRINKS</h2>
+  <div class="menu-grid">
+    <div class="menu-item drinks">
+      <span class="name">Oreo Shake</span>
+      <span class="desc"></span>
+      <span class="price">$7.50</span>
+    </div>
+    <div class="menu-item drinks">
+      <span class="name">Milo Shake</span>
+      <span class="desc"></span>
+      <span class="price">$7.50</span>
+    </div>
+    <div class="menu-item drinks">
+      <span class="name">Strawberry Shake</span>
+      <span class="desc"></span>
+      <span class="price">$6.50</span>
+    </div>
+    <div class="menu-item drinks">
+      <span class="name">Chocolate Shake</span>
+      <span class="desc"></span>
+      <span class="price">$6.50</span>
+    </div>
+    <div class="menu-item drinks">
+      <span class="name">Vanilla Shake</span>
+      <span class="desc"></span>
+      <span class="price">$6.50</span>
+    </div>
+    <div class="menu-item drinks">
+      <span class="name">Mango Shake</span>
+      <span class="desc"></span>
+      <span class="price">$6.50</span>
+    </div>
+  </div>
+
+  <h2>🌭 HOTDOGS</h2>
+  <div class="menu-grid">
+    <div class="menu-item hotdogs">
+      <span class="name">Traditional Hotdog</span>
+      <span class="desc">Grilled Cheese Kransky, Mustard Sauce, Tomato Ketchup served with Chips and Coleslaw</span>
+      <span class="price">$12.50</span>
+    </div>
+    <div class="menu-item hotdogs">
+      <span class="name">Chilli Hotdog</span>
+      <span class="desc">Grilled Chilli Cheese Kransky, Mustard Sauce, Spicy Mayo, Tomato Ketchup served with Chips and Coleslaw</span>
+      <span class="price">$12.50</span>
+    </div>
+    <div class="menu-item hotdogs">
+      <span class="name">Loaded Hotdog</span>
+      <span class="desc">Grilled Loaded Bacon, Jalapeno, Gherkin, Tomato Caramelised Onion, Chips, Mustard Sauce</span>
+      <span class="price">$14.00</span>
+    </div>
+  </div>
+
+  <h2>🍞 TOASTY</h2>
+  <div class="menu-grid">
+    <div class="menu-item toasty">
+      <span class="name">Original French Toasty</span>
+      <span class="desc">Vanilla, Banana, Maple, Seasonal Fruits served with Cream</span>
+      <span class="price">$12.00</span>
+    </div>
+    <div class="menu-item toasty">
+      <span class="name">Oreo French Toasty</span>
+      <span class="desc">Oreo, White Chocolate, Syrup, Seasonal Fruits served with Biscuit, Ice Cream</span>
+      <span class="price">$14.00</span>
+    </div>
+    <div class="menu-item toasty">
+      <span class="name">Chocolate French Toasty</span>
+      <span class="desc">Chocolate Syrup, Seasonal Fruits served with Chocolate Ice Cream</span>
+      <span class="price">$13.00</span>
+    </div>
+  </div>
+
+  <h2>🫓 QUESADILLA</h2>
+  <div class="menu-grid">
+    <div class="menu-item quesadilla">
+      <span class="name">Pulled Pork Quesadilla</span>
+      <span class="desc">Cheese, Onion, Gherkin, Roasted with Capsicum, Tomato Salsa, C95 Sauce, BBQ Sauce served with Chips and Coleslaw Sauce</span>
+      <span class="price">$16.50</span>
+    </div>
+    <div class="menu-item quesadilla">
+      <span class="name">Pulled Beef Quesadilla</span>
+      <span class="desc">Cheese, Onion, Gherkin, Roasted with Capsicum, Tomato Salsa, C95 Sauce, BBQ Sauce served with Chips and Coleslaw Sauce</span>
+      <span class="price">$16.50</span>
+    </div>
+    <div class="menu-item quesadilla">
+      <span class="name">Halloumi Quesadilla</span>
+      <span class="desc">Halloumi, Onion, Gherkin, Roasted Capsicum, Tomato Salsa, C95 Sauce served with Special Seasoned Chips and Coleslaw</span>
+      <span class="price">$15.50</span>
+    </div>
+    <div class="menu-item quesadilla">
+      <span class="name">Grilled Chicken Quesadilla</span>
+      <span class="desc">Chicken, Mozzarella Cheese, Onion, Gherkin, Roasted Pumpkin, Special Seasoned Chips and Coleslaw Sauce</span>
+      <span class="price">$15.50</span>
+    </div>
+  </div>
+
+  <h2>🌯 WRAPS</h2>
+  <div class="menu-grid">
+    <div class="menu-item wraps">
+      <span class="name">Grilled Chicken Wrap</span>
+      <span class="desc">Seasoned Grilled Chicken, C95 Cheese Sauce, Olives, Tomato, Lettuce, Onion, Cucumber, Tartare Sauce, C95 Sauce, served with Special Seasoned Chips</span>
+      <span class="price">$12.50</span>
+    </div>
+    <div class="menu-item wraps">
+      <span class="name">Halloumi Wrap</span>
+      <span class="desc">Roasted Pumpkin, Tomato, Lettuce, C95 Sauce, Olives, served with Special Seasoned Chips</span>
+      <span class="price">$12.50</span>
+    </div>
+    <div class="menu-item wraps">
+      <span class="name">Pulled Pork Wrap</span>
+      <span class="desc">Pulled Pork, C95 Cheese Sauce, Olives, Tomato, Lettuce, served with Special Seasoned Chips</span>
+      <span class="price">$13.50</span>
+    </div>
+    <div class="menu-item wraps">
+      <span class="name">Pulled Beef Wrap</span>
+      <span class="desc">Pulled Beef, C95 Cheese Sauce, Olives, Tomato, Lettuce, served with Special Seasoned Chips</span>
+      <span class="price">$13.50</span>
+    </div>
+  </div>
+</section>
+
+<section class="footer" id="contact">
+  <p>📍 Visit us at: Shop 1A, 271-281 Gouger Street, Adelaide SA</p>
+  <p>📞 Call: 0423 717 047 | 📧 Email: 271cafe95@gmail.com</p>
+  <p>Follow us on Instagram @cafe_95___</p>
+</section>
+
+</body>
+</html>
